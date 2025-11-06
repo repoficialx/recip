@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>recip</RootNamespace>
     <AssemblyName>recip</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -116,6 +116,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetRecipes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetRecipes.Designer.cs">
+      <DependentUpon>GetRecipes.cs</DependentUpon>
+    </Compile>
     <Compile Include="lang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="MakeRecipe.Designer.cs">
       <DependentUpon>MakeRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineRecipeOpened.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineRecipeOpened.Designer.cs">
+      <DependentUpon>OnlineRecipeOpened.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,11 +161,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GetRecipes.resx">
+      <DependentUpon>GetRecipes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lang.resx">
       <DependentUpon>lang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakeRecipe.resx">
       <DependentUpon>MakeRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineRecipeOpened.resx">
+      <DependentUpon>OnlineRecipeOpened.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

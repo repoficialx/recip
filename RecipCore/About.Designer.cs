@@ -73,7 +73,7 @@
             webView21.DefaultBackgroundColor = Color.White;
             webView21.Location = new Point(12, 98);
             webView21.Name = "webView21";
-            webView21.Size = new Size(539, 44);
+            webView21.Size = new Size(553, 44);
             webView21.TabIndex = 3;
             webView21.ZoomFactor = 1D;
             // 
@@ -81,11 +81,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(563, 154);
+            ClientSize = new Size(577, 154);
             Controls.Add(webView21);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;

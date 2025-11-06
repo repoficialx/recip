@@ -54,7 +54,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Recip v1.1";
+            this.label1.Text = "Recip v1.2";
             // 
             // webView2
             // 

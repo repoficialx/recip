@@ -1,4 +1,6 @@
-﻿public enum Language
+﻿namespace Recip4Linux;
+
+public enum Language
 {
     English,
     Spanish

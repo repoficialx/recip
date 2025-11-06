@@ -33,6 +33,7 @@
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
+            onlineToolStripMenuItem = new ToolStripMenuItem();
             languageToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem2 = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
@@ -51,6 +52,7 @@
             button6 = new Button();
             button5 = new Button();
             comboBox1 = new ComboBox();
+            button9 = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -64,13 +66,13 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, languageToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(436, 28);
+            menuStrip1.Size = new Size(494, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, onlineToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(46, 24);
             fileToolStripMenuItem.Text = "&File";
@@ -88,6 +90,13 @@
             openToolStripMenuItem.Size = new Size(224, 26);
             openToolStripMenuItem.Text = "&Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
+            // 
+            // onlineToolStripMenuItem
+            // 
+            onlineToolStripMenuItem.Name = "onlineToolStripMenuItem";
+            onlineToolStripMenuItem.Size = new Size(224, 26);
+            onlineToolStripMenuItem.Text = "On&line";
+            onlineToolStripMenuItem.Click += onlineToolStripMenuItem_Click;
             // 
             // languageToolStripMenuItem
             // 
@@ -121,7 +130,7 @@
             // 
             button1.Location = new Point(12, 31);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(84, 29);
             button1.TabIndex = 1;
             button1.Text = "Open";
             button1.UseVisualStyleBackColor = true;
@@ -129,18 +138,18 @@
             // 
             // button2
             // 
-            button2.Location = new Point(12, 66);
+            button2.Location = new Point(102, 31);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(86, 29);
             button2.TabIndex = 2;
-            button2.Text = "Make";
+            button2.Text = "New";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.recip_new;
-            pictureBox1.Location = new Point(112, 33);
+            pictureBox1.Location = new Point(194, 33);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(64, 62);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -151,7 +160,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Location = new Point(170, 78);
+            label1.Location = new Point(252, 78);
             label1.Name = "label1";
             label1.Size = new Size(35, 20);
             label1.TabIndex = 4;
@@ -160,12 +169,13 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(panel1);
-            groupBox1.Location = new Point(232, 20);
+            groupBox1.Location = new Point(289, 20);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(188, 119);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "Recent";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // panel1
             // 
@@ -212,7 +222,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(187, -8);
+            button8.Location = new Point(182, -1);
             button8.Name = "button8";
             button8.Size = new Size(24, 29);
             button8.TabIndex = 4;
@@ -261,11 +271,22 @@
             comboBox1.TabIndex = 0;
             comboBox1.Text = "Color";
             // 
+            // button9
+            // 
+            button9.Location = new Point(12, 66);
+            button9.Name = "button9";
+            button9.Size = new Size(84, 29);
+            button9.TabIndex = 7;
+            button9.Text = "Online";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(436, 209);
+            ClientSize = new Size(494, 209);
+            Controls.Add(button9);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
@@ -276,11 +297,11 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
-            MaximumSize = new Size(454, 256);
+            MaximumSize = new Size(512, 256);
             MinimizeBox = false;
             MinimumSize = new Size(454, 186);
             Name = "Form1";
-            Text = "Recip v1.2-c";
+            Text = "Recip v1.2";
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -316,5 +337,7 @@
         private Button button7;
         private Button button6;
         private Button button8;
+        private ToolStripMenuItem onlineToolStripMenuItem;
+        private Button button9;
     }
 }

@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+        <Version>1.2-0.9</Version>
+        <Title>recip4linux</Title>
+        <Authors>repoficialx</Authors>
+        <Description>Recip</Description>
+        <Copyright>(c) 2025 repoficialx</Copyright>
+        <PackageProjectUrl>https://repoficialx.xyz/recip</PackageProjectUrl>
+        <PackageIcon>recip new.png</PackageIcon>
+        <RepositoryUrl>https://github.com/repoficialx/Recip</RepositoryUrl>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Resources\icons8-spain-flag-100.png" />
+      <None Remove="Resources\icons8-usa-100.png" />
+      <None Remove="Resources\recipiconbnnew.ico" />
+      <None Remove="Resources\recipiconmononew.ico" />
+      <None Remove="Resources\recipiconnbnew.ico" />
+      <None Remove="Resources\recipiconrescnew.ico" />
+      <None Remove="Resources\reciplogobn.png" />
+      <None Remove="Resources\reciplogomono.png" />
+      <None Remove="Resources\reciplogoresc.png" />
+      <None Remove="Resources\recip_new.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.3.6" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.3.6" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.6" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.6" />
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.3.6">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="BinToss.GroupBox.Avalonia" Version="1.0.0" />
+        <PackageReference Include="MessageBox.Avalonia" Version="3.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="Resources\icons8-spain-flag-100.png" />
+      <AvaloniaResource Include="Resources\icons8-usa-100.png" />
+      <AvaloniaResource Include="Resources\recipiconbnnew.ico" />
+      <AvaloniaResource Include="Resources\recipiconmononew.ico" />
+      <AvaloniaResource Include="Resources\recipiconnbnew.ico" />
+      <AvaloniaResource Include="Resources\recipiconrescnew.ico" />
+      <AvaloniaResource Include="Resources\reciplogobn.png" />
+      <AvaloniaResource Include="Resources\reciplogomono.png" />
+      <AvaloniaResource Include="Resources\reciplogoresc.png" />
+      <AvaloniaResource Include="Resources\recip_new.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Properties\Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Properties\Resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="recip new.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+</Project>

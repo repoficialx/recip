@@ -37,6 +37,13 @@ public static class Strings
     public static string ToolTipRestart;
     public static string MenuLanguage;
     public static string MenuLanguageChange;
+    public static string BtnDiscover;
+    public static string StatusLoading;
+    public static string ErrorRetrievingRecipes;
+    public static string StatusPublishing;
+    public static string PublishSuccess;
+    public static string PublishError;
+    public static string BtnPublish;
 
     public static void SetLang(Language lang)
     {
@@ -44,7 +51,7 @@ public static class Strings
         {
             case Language.English:
                 BtnOpen = "Open";
-                BtnMake = "Make";
+                BtnMake = "New";
                 GroupAppSettings = "App settings";
                 ComboColor = "Color";
                 ComboColorRescaled = "Color (rescaled)";
@@ -57,7 +64,7 @@ public static class Strings
                 MenuFileNew = "&New";
                 MenuFileOpen = "&Open";
                 MenuHelpAbout = "&About Recip";
-                LabelAbout = "Recip v1.1 is the latest version (as of 05-05-2025). Its license is MIT\n License, check the license terms and rights just below. To contribute,\nvisit the project site: https://github.com/repoficialx/recip";
+                LabelAbout = "Recip v1.2 is the latest version (as of 01-09-2025). Its license is MIT\n License, check the license terms and rights just below. To contribute,\nvisit the project site: https://github.com/repoficialx/recip";
                 LabelRecipeName = "Recipe Name:";
                 LabelIngredients = "Ingredients:";
                 LabelSteps = "Steps:";
@@ -73,6 +80,13 @@ public static class Strings
                 ToolTipRestart = "Restart app";
                 MenuLanguage = "&Language";
                 MenuLanguageChange = "&Change Language";
+                BtnDiscover = "&Discover";
+                StatusLoading = "Loading...";
+                ErrorRetrievingRecipes = "Couldn't retrieve recipes.";
+                StatusPublishing = "Publishing...";
+                PublishSuccess = "Recipe published successfully 🍽️";
+                PublishError = "Error publishing recipe.";
+                BtnPublish = "Publish";
                 break;
 
             case Language.Spanish:
@@ -90,7 +104,7 @@ public static class Strings
                 MenuFileNew = "&Nuevo";
                 MenuFileOpen = "&Abrir";
                 MenuHelpAbout = "Acerca de &Recip";
-                LabelAbout = "Recip v1.1 es la versión más reciente (al 05-05-2025). Su licencia es la \nLicencia MIT. Puedes ver tus derechos y los términos debajo. Para \ncontribuir, visita el proyecto: https://github.com/repoficialx/recip";
+                LabelAbout = "Recip v1.2 es la versión más reciente (al 01-09-2025). Su licencia es la \nLicencia MIT. Puedes ver tus derechos y los términos debajo. Para \ncontribuir, visita el proyecto: https://github.com/repoficialx/recip";
                 LabelRecipeName = "Nombre de la receta:";
                 LabelIngredients = "Ingredientes:";
                 LabelSteps = "Pasos:";
@@ -106,6 +120,13 @@ public static class Strings
                 ToolTipRestart = "Reiniciar app";
                 MenuLanguage = "&Idioma";
                 MenuLanguageChange = "Ca&mbiar idioma";
+                BtnDiscover = "&Explorar";
+                StatusLoading = "Cargando...";
+                ErrorRetrievingRecipes = "No se pudieron obtener las recetas.";
+                StatusPublishing = "Publicando...";
+                PublishSuccess = "Receta publicada con éxito 🍽️";
+                PublishError = "Error al publicar la receta.";
+                BtnPublish = "Publicar";
                 break;
         }
     }

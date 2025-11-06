@@ -287,5 +287,20 @@ namespace RecipCore
         {
             new MakeRecipe().ShowDialog();
         }
+
+        private void onlineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new GetRecetas().ShowDialog();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new GetRecetas().ShowDialog();
+        }
     }
 }

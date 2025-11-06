@@ -1,6 +1,9 @@
-﻿namespace RecipCore
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace recip
 {
-    partial class RecipeOpened
+    partial class OnlineRecipeOpened
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +37,6 @@
             label2 = new Label();
             textBox2 = new TextBox();
             panel1 = new Panel();
-            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             flowLayoutPanel1.SuspendLayout();
@@ -94,7 +96,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Bottom;
@@ -102,16 +103,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(618, 32);
             panel1.TabIndex = 2;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(249, -1);
-            button3.Name = "button3";
-            button3.Size = new Size(134, 29);
-            button3.TabIndex = 2;
-            button3.Text = "UPLOAD";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -164,6 +155,5 @@
         private TextBox textBox2;
         private Button button2;
         private Button button1;
-        private Button button3;
     }
 }

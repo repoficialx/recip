@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        d:DesignWidth="250" 
+        d:DesignHeight="120"
+        x:Class="Recip4Linux.LangWindow"
+        Width="250"
+        Height="120"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False"
+        Background="#3A3A3A"
+        Title="Select language">
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+        <Button Width="105" Height="80" Background="Transparent" Click="OnSpanishClick">
+            <Image Source="/Resources/icons8-spain-flag-100.png"/>
+        </Button>
+
+        <Button Width="105" Height="80" Background="Transparent" Click="OnEnglishClick">
+            <Image Source="/Resources/icons8-usa-100.png"/>
+        </Button>
+    </StackPanel>
+</Window>

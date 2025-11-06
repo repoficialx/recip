@@ -214,6 +214,7 @@ namespace REC
             restart.SetToolTip(button8, Strings.ToolTipRestart);
             languageToolStripMenuItem.Text = Strings.MenuLanguage;
             toolStripMenuItem1.Text = Strings.MenuLanguageChange;
+            button9.Text = Strings.BtnDiscover;
         }
 
         private void button5_Click(object sender, EventArgs e)

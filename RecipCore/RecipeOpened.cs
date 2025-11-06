@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace RecipCore
         public RecipeOpened()
         {
             InitializeComponent();
+            button3.Text = Strings.BtnPublish;
         }
 
         private void RecipeOpened_Load(object sender, EventArgs e)
@@ -90,6 +92,53 @@ namespace RecipCore
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            // Guardamos el texto original
+            string originalText = button3.Text;
+
+            try
+            {
+                // Cambiamos a estado "loading"
+                button3.Enabled = false;
+                button3.Text = Strings.StatusPublishing;
+
+                // Llamada al método async
+                await PublicarReceta(
+                Text,
+                textBox1.Lines,
+                textBox2.Lines);
+                MessageBox.Show(Strings.PublishSuccess);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Strings.PublishError + " " + ex.Message);
+            }
+            finally
+            {
+                // Restauramos el botón pase lo que pase
+                button3.Enabled = true;
+                button3.Text = originalText;
+            }
+        }
+
+        public async Task PublicarReceta(string nombre, string[] ingredientes, string[] instrucciones)
+        {
+            using var client = new HttpClient();
+            var values = new Dictionary<string, string>
+    {
+        { "nombre", nombre },
+        { "ingredientes", JsonConvert.SerializeObject(ingredientes) },
+        { "instrucciones", JsonConvert.SerializeObject(instrucciones) }
+    };
+
+            var content = new FormUrlEncodedContent(values);
+            var response = await client.PostAsync("https://repoficialx.xyz/recip/uploadRecipe.php", content);
+
+            string result = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(result);
         }
     }
 }
