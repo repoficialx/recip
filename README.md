@@ -27,7 +27,7 @@ Creada en C# con una interfaz moderna, pensada para Windows (x64, x86, ARM64).
 
 ## 📥 Download | Descargar
 
-Latest release: [Recip v1.0](https://github.com/RayElProOficial/Recip/releases)
+Latest release: [Recip v1.1](https://github.com/RayElProOficial/Recip/releases)
 
 ### Installers available | Instaladores disponibles:
 
@@ -73,8 +73,8 @@ Código abierto bajo la [licencia MIT](LICENSE)
 
 ## 👨‍💻 Author | Autor
 
-Made with ❤️ by [RayElProOficial](https://github.com/RayElProOficial)  
-Hecho con ❤️ por [RayElProOficial](https://github.com/RayElProOficial)
+Made with ❤️ by [repoficialx](https://github.com/repoficialx)  
+Hecho con ❤️ por [repoficialx](https://github.com/repoficialx)
 
 ---
 
