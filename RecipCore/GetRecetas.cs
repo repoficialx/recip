@@ -29,11 +29,11 @@ namespace RecipCore
             public string[] instrucciones { get; set; }
         }
 
-        public async Task<List<Receta>> GetRecetasOnline()
+        public async Task<List<RecetaV2>> GetRecetasOnline()
         {
             using var client = new HttpClient();
             var json = await client.GetStringAsync("https://repoficialx.xyz/recip/recetas.json");
-            var data = JsonConvert.DeserializeObject<Dictionary<string, List<Receta>>>(json);
+            var data = JsonConvert.DeserializeObject<Dictionary<string, List<RecetaV2>>>(json);
             return data["recetas"];
         }
 
@@ -50,7 +50,7 @@ namespace RecipCore
                 listBox1.Items.Clear();
                 foreach (var receta in recetas)
                 {
-                    listBox1.Items.Add(receta.nombre);
+                    listBox1.Items.Add(receta.name);
                 }
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }

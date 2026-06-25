@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,18 +24,12 @@ namespace RecipCore
             textBox1.Text = Strings.StatusLoading;
             textBox2.Text = Strings.StatusLoading;
         }
-        public class Receta
-        {
-            public string nombre { get; set; }
-            public string[] ingredientes { get; set; }
-            public string[] instrucciones { get; set; }
-        }
 
-        public async Task<List<Receta>> GetRecetasOnline()
+        public async Task<List<RecetaV2>> GetRecetasOnline()
         {
             using var client = new HttpClient();
             var json = await client.GetStringAsync("https://repoficialx.xyz/recip/recetas.json");
-            var data = JsonConvert.DeserializeObject<Dictionary<string, List<Receta>>>(json);
+            var data = JsonConvert.DeserializeObject<Dictionary<string, List<RecetaV2>>>(json);
             return data["recetas"];
         }
         private void RecipeOpened_Load(object sender, EventArgs e)
@@ -52,7 +47,7 @@ namespace RecipCore
                     MessageBox.Show(Strings.ErrorRetrievingRecipes + ": " + task.Exception.Message);
                     return;
                 }
-                var recetas = task.Result;
+                var recetas = (List<RecetaV2>)task.Result;
                 foreach (var receta in recetas)
                 {
                     if (filePath == receta.nombre)
